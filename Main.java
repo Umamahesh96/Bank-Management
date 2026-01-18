@@ -32,5 +32,17 @@ class Withdraw extends Transaction{
         super(customerId, tellerId);
         this.amount = amount;
     }
-    
+    @Override
+    public String getTransactionDescription(){
+        return "Teller "+getTellerId()+" withdrew "+amount+" from account "+getCustomerId();
+    }
+}
+class OpenAccount extends Transaction{
+    public OpenAccount(int customerId, int tellerId){
+        super(customerId, tellerId);
+    }
+    @Override
+    public String getTransactionDescription(){
+        return "Teller "+getTellerId()+"opened account "+getCustomerId();
+    }
 }
