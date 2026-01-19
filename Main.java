@@ -46,3 +46,13 @@ class OpenAccount extends Transaction{
         return "Teller "+getTellerId()+"opened account "+getCustomerId();
     }
 }
+
+class BankTeller{
+    private int id;
+    public BankTeller(int id){
+        this.id = id;
+    }
+    public int getId(){
+        return id;
+    }
+}
