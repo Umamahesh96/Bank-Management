@@ -11,7 +11,7 @@ class Bank{
         this.totalCash = totalCash;
     }
 
-    public BankBranch addbranch(String address, int initialFunds){
+    public BankBranch addBranch(String address, int initialFunds){
         BankBranch branch = new BankBranch(address, initialFunds, this.bankSystem);
         this.branches.add(branch);
         return branch;
